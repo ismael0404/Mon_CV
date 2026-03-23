@@ -5,6 +5,14 @@
 <title>CV - Naon Ismael</title>
 
 <style>
+.photo{
+    width:110px;
+    height:140px;
+    object-fit:cover;
+    border-radius:5px;
+    flex-shrink:0;
+    border: 2px solid black;
+}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -25,6 +33,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
+    gap: 20px;
 }
 
 .header h1{
@@ -39,21 +48,9 @@ body{
 .summary{
     margin-top:8px;
 }
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap: 20px; /* espace entre texte et photo */
-}
+
 .header > div {
-    margin-right: 20px; /* pousse le texte à gauche de la photo */
-}
-.photo{
-    width:110px;
-    height:140px;
-    object-fit:cover;
-    border-radius:5px;
-    flex-shrink:0;
+    margin-right: 20px;
 }
 
 .section{
@@ -82,24 +79,55 @@ a{
     text-decoration:none;
 }
 
+/* ================== PRINT FIX ================== */
+
 @media print {
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
 
     body{
         background:white;
+        zoom: 0.85;
     }
 
     .container{
-        box-shadow:none;
-        margin:0;
-        padding:20px;
-        max-width:100%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-shadow: none;
+        box-sizing: border-box;
     }
 
     .section{
         page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    /* 🔥 FIX PRINCIPAL */
+    .header > div{
+        flex: 1;
+        margin-right: 5px; /* réduit pour éviter débordement */
+    }
+
+    .photo{
+        width: 100px;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 5px; /* évite qu'elle touche le bord */
     }
 
 }
+
 
 </style>
 </head>
@@ -111,17 +139,18 @@ a{
 <div class="header">
 <div>
 <h1>Naon Ismael</h1>
-<p class="subtitle">Développeur Web & Mobile Junior — Licence 3 Informatique</p>
+<p class="subtitle">Développeur Web & Mobile Junior — Licence 3 MIAGE</p>
 
 <p class="summary">
-Étudiant développeur passionné par le développement web et mobile.
-Expérience avec React JS, Node JS, Flutter et PHP/MySQL à travers plusieurs projets académiques.
-Motivé pour apprendre rapidement et contribuer dans un environnement professionnel.
+Étudiant développeur passionné par les technologies web et mobile, je me distingue par ma polyvalence et mon
+engagement au-delà du code. J'ai développé un sens aigu de l'organisation, de la
+créativité et du travail en équipe. Curieux, dynamique et toujours prêt à apprendre, je suis déterminé à contribuer
+efficacement dans tout environnement professionnel stimulant.
 </p>
 
 </div>
 
-<img src="image.jpeg" class="photo">
+<img src="image1.jpeg" class="photo">
 </div>
 
 <div class="section">
@@ -134,7 +163,7 @@ Motivé pour apprendre rapidement et contribuer dans un environnement profession
 <div class="line"><div class="label">Email :</div> ismaelnaon4@gmail.com</div>
 </div>
 
-<div class="section">
+<div class="section"> 
 <div class="title">Compétences techniques</div>
 
 <div class="line"><div class="label">Frontend :</div> HTML, CSS, JavaScript, React JS, Next JS, Bootstrap, Tailwind CSS</div>
@@ -147,24 +176,32 @@ Motivé pour apprendre rapidement et contribuer dans un environnement profession
 </div>
 
 <div class="section">
+<div class="title">Expériences & Hackathons</div>
+
+<div class="line">• Participation au DevFest Abidjan — collaboration en équipe et développement de solutions innovantes</div>
+<div class="line">• Participation au Hackaredis (IUA) — conception et réalisation de projets en temps limité</div>
+
+</div>
+
+<div class="section">
 <div class="title">Projets</div>
 
-<div class="line">• Application mobile Flutter avec interface utilisateur interactive</div>
-<div class="line">• Application web React JS avec composants dynamiques</div>
-<div class="line">• Projet Java en programmation orientée objet</div>
-<div class="line">• Développement web PHP/MySQL</div>
+<div class="line">• Création d'une app mobile sous Flutter dotée d'une interface fluide et intuitive pensée pour l'utilisateur</div>
+<div class="line">• Mise en oeuvre d'une plateforme web avec React JS reposant sur une architecture de composants modulaires</div>
+<div class="line">• Développement d'une solution logicielle en Java en appliquant rigoureusement les concepts de la POO</div>
+<div class="line">• Construction d'un environnement web dynamique en PHP couplé à une base de données MySQL structurée</div>
 
 </div>
 
 <div class="section">
 <div class="title">Formation académique</div>
 
-<div class="line"><div class="label">2025 - Présent :</div> Licence 3 Informatique — Institut Universitaire d’Abidjan (IUA)</div>
-<div class="line"><div class="label">Licence 1 & 2 :</div> Université Polytechnique de Bingerville (UPB)</div>
-<div class="line"><div class="label">2023 :</div> Baccalauréat — Groupe Scolaire FUSOS Cours Sociaux Abobo</div>
+<div class="line">2025 - 2026 : Licence 3 MIAGE — Institut Universitaire d’Abidjan (IUA)</div>
+<div class="line">2024 - 2025 : Licence 2 MIAGE — Université Polytechnique de Bingerville (UPB)</div>
+<div class="line">2023 - 2024 : Licence 1 MIAGE — Université Polytechnique de Bingerville (UPB)</div>
+<div class="line">2022 - 2023 : Baccalauréat — Groupe Scolaire FUSOS Cours Sociaux Abobo</div>
 
 </div>
-
 <div class="section">
 <div class="title">Certifications</div>
 
@@ -187,7 +224,9 @@ Motivé pour apprendre rapidement et contribuer dans un environnement profession
 
 <div class="section">
 <div class="title">Centres d'intérêt</div>
-<div class="line">Football</div>
+
+<div class="line">• Football • Travail en équipe • Veille technologique</div>
+
 </div>
 
 </div>
