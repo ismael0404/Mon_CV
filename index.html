@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -22,11 +24,7 @@
     flex:1;
     text-align:justify;
 }
-.label{
-    width:220px;
-    font-weight:bold;
-    flex-shrink:0; /* 🔥 empêche le décalage */
-}
+
 .photo{
     width:110px;
     height:140px;
@@ -35,11 +33,13 @@
     flex-shrink:0;
     border: 2px solid black;
 }
+
 /* Justification du texte à partir des compétences */
 .section .line{
     text-align: justify;
     line-height: 1.35;
 }
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background:#f5f5f5;
@@ -92,19 +92,13 @@ body{
     padding-bottom:3px;
 }
 
-.line{
-    display:flex;
-    margin-bottom:3px;
-}
-
-.label{
-    width:220px;
-    font-weight:bold;
-}
-
 a{
     color:black;
     text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
 }
 
 /* ================== PRINT FIX ================== */
@@ -141,23 +135,22 @@ a{
         align-items: flex-start;
     }
 
-    /* 🔥 FIX PRINCIPAL */
     .header > div{
         flex: 1;
-        margin-right: 5px; /* réduit pour éviter débordement */
+        margin-right: 5px;
     }
 
     .photo{
         width: 100px;
         height: auto;
         flex-shrink: 0;
-        margin-right: 5px; /* évite qu'elle touche le bord */
+        margin-right: 5px;
     }
 
 }
 
-
 </style>
+
 </head>
 
 <body>
@@ -170,7 +163,7 @@ a{
 <p class="subtitle">Développeur Web & Mobile Full Stack | MIAGE</p>
 
 <p class="summary">
-Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalent combinant développement web, conception d’applications, gestion des données et compréhension des besoins métiers. Je possède des compétences en développement front-end, back-end et en gestion de bases de données. Curieux, rigoureux et motivé, je souhaite mettre mes compétences au service de projets concrets et contribuer à la conception de solutions informatiques fiables et adaptées aux enjeux des organisations.
+Diplômé en MIAGE avec la mention Très Bien, je suis un développeur Junior doté d’un profil polyvalent combinant développement web, conception d’applications, gestion des données et compréhension des besoins métiers. Je possède des compétences en développement front-end, back-end et en gestion de bases de données. Curieux, rigoureux et motivé, je souhaite mettre mes compétences au service de projets concrets et contribuer à la conception de solutions informatiques fiables et adaptées aux enjeux des organisations.
 </p>
 
 </div>
@@ -196,7 +189,7 @@ Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalen
 <div class="line"><div class="label">Mobile :</div> Flutter (Dart)</div>
 <div class="line"><div class="label">Langages :</div> Python, Java, C</div>
 <div class="line"><div class="label">Bases de données :</div> MySQL, PostgreSQL, MongoDB</div>
-<div class="line"><div class="label">Outils & Cloud:</div> Word, Excel, PowerPoint, Git, Github, Postman, Visual Studio Code, Figma, Firebase</div>
+<div class="line"><div class="label">Outils & Cloud :</div> Word, Excel, PowerPoint, Git, GitHub, Postman, Visual Studio Code, Figma, Firebase, Windows, Linux, PowerShell, CMD</div>
 <div class="line"><div class="label">Gestion & Organisation :</div> Analyse des besoins métiers, gestion de projet, modélisation des systèmes d’information, travail en équipe</div>
 
 <div class="line"><div class="label">Finance & Comptabilité :</div> Notions de comptabilité générale, analyse financière, gestion des données financières</div>
@@ -208,7 +201,6 @@ Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalen
 <div class="line">• Participation au DevFest Abidjan — collaboration en équipe et développement de solutions innovantes</div>
 <div class="line">• Participation au Hackaredis (IUA) — conception et réalisation de projets en temps limité</div>
 <div class="line">• Design Sprint Universitaire 2026 — Participation à un processus d’innovation (analyse de problématiques, génération d’idées et prototypage en équipe)</div>
-
 
 </div>
 
@@ -243,6 +235,7 @@ Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalen
 <div class="line">2022 - 2023 : Baccalauréat — Groupe Scolaire FUSOS Cours Sociaux Abobo</div>
 
 </div>
+
 <div class="section">
 <div class="title">Certifications</div>
 
@@ -261,15 +254,33 @@ Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalen
 <div class="section">
 <div class="title">Liens professionnels</div>
 
-<div class="line"><div class="label">GitHub :</div> https://github.com/ismael0404</div>
-<div class="line"><div class="label">LinkedIn :</div> https://www.linkedin.com/in/ismael-naon-21357442b/</div>
+<div class="line">
+    <div class="label">GitHub :</div>
+    <a href="https://github.com/ismael0404" target="_blank">
+        https://github.com/ismael0404
+    </a>
+</div>
+
+<div class="line">
+    <div class="label">LinkedIn :</div>
+    <a href="https://www.linkedin.com/in/ismael-naon-21357442" target="_blank">
+        https://www.linkedin.com/in/ismael-naon-21357442
+    </a>
+</div>
+
+<div class="line">
+    <div class="label">Portfolio :</div>
+    <a href="https://porfolio-ismael-dev.vercel.app/" target="_blank">
+        https://porfolio-ismael-dev.vercel.app/
+    </a>
+</div>
 
 </div>
 
 <div class="section">
 <div class="title">Centres d'intérêt</div>
 
-<div class="line">• Football • Analyse économique • Travail en équipe • Veille technologique • Développement Web •Apprentissage continu • Technologies</div>
+<div class="line">• Football • Analyse économique • Travail en équipe • Veille technologique • Développement Web • Apprentissage continu • Technologies</div>
 
 </div>
 
@@ -277,3 +288,5 @@ Diplômé en MIAGE, je suis un développeur Junior doté d’un profil polyvalen
 
 </body>
 </html>
+```
+
